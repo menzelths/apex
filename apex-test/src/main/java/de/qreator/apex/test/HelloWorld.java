@@ -13,7 +13,7 @@ public class HelloWorld {
     Vertx vertx = Vertx.vertx();
 
     Router router = Router.router(vertx);
-    router.route().handler(rc -> rc.response().putHeader("content-type", "text/plain").end("Hallo Leute!"));
+    router.route().handler(rc -> rc.response().putHeader("content-type", "text/plain").end("Hallo Leute 2!"));
 
     vertx.createHttpServer().requestHandler(router::accept).listen(8080);
     
